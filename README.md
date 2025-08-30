@@ -12,6 +12,7 @@ Volatility within a market is described as how much a price moves within a given
 
 # Project Structure
 
+```
 Market-Volitility-with-PCA-analysis/
 ├── data/
 │   └── Download Data - INDEX_UK_FTSE UK_UKX.csv
@@ -20,5 +21,5 @@ Market-Volitility-with-PCA-analysis/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+```
 A market volitility model with PCA analysis
