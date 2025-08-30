@@ -22,4 +22,11 @@ Market-Volitility-with-PCA-analysis/
 ├── README.md
 └── requirements.txt
 ```
-A market volitility model with PCA analysis
+
+# Getting Started
+
+To be completed
+
+# Purpose
+
+To be completed
