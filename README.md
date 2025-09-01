@@ -25,7 +25,7 @@ Market-Volitility-with-PCA-analysis/
 
 # Getting Started
 
-To be completed. Currently
+To be completed. Currently being
 
 # Purpose
 
