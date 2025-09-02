@@ -9,7 +9,6 @@ Volatility within a market is described as how much a price moves within a given
 * Market: FTSE 100
 * Range: 30/06/2024 - 30/07/2025
 * Source: MarketWatch
-* 
 
 # Project Structure
 
