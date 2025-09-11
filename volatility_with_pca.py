@@ -43,6 +43,7 @@ pca.fit(X_train)
 explained_varience = pca.explained_varience_ratio_
 
 plt.plot(np.cumsum(explained_varience)
+         # np.cumsum stands for cumulative sum. so a, a+b, a+b+c etc
 plt.xlabel('Number of components')
 plt.ylabel('Cumulative explained varience')
 plt.title('Comparison of components against explained varience')
