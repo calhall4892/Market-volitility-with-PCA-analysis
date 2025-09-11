@@ -9,4 +9,10 @@ print(df.head())
 
 # creating the daily change in values (volatility)
 df['daily volatility'] = (df['Close'] - df['Open']) / df['Open']
-df['target'] = (df['daily volatility'] > 0).astype(int)
+
+#PCA is set up the same as a regression model. Create a X containing all of your features and y with the dependant variable 
+# Creating the X and y for PCA
+X = df['High', 'Low', 'Open', 'Close']
+y = df['daily volatility']
+
+split_data = int(len(X)* 0.7)
