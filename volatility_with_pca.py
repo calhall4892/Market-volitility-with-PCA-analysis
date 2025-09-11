@@ -13,7 +13,7 @@ df['daily volatility'] = (df['Close'] - df['Open']) / df['Open']
 
 #PCA is set up the same as a regression model. Create a X containing all of your features and y with the dependant variable 
 # Creating the X and y for PCA
-X = df['High', 'Low', 'Open', 'Close']
+X = df[['High', 'Low', 'Open', 'Close']]
 y = df['daily volatility']
 
 # splitting the data
@@ -40,10 +40,10 @@ pca = PCA(n_components=None)
 pca.fit(X_train)
 
 # This is an explained varience metric build into the PCA
-explained_varience = pca.explained_varience_ratio_
+explained_varience = pca.explained_variance_ratio_
 
-plt.plot(np.cumsum(explained_varience)
-         # np.cumsum stands for cumulative sum. so a, a+b, a+b+c etc
+plt.plot(np.cumsum(explained_varience))
+# np.cumsum stands for cumulative sum. so a, a+b, a+b+c etc
 plt.xlabel('Number of components')
 plt.ylabel('Cumulative explained varience')
 plt.title('Comparison of components against explained varience')
