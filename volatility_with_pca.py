@@ -15,4 +15,21 @@ df['daily volatility'] = (df['Close'] - df['Open']) / df['Open']
 X = df['High', 'Low', 'Open', 'Close']
 y = df['daily volatility']
 
-split_data = int(len(X)* 0.7)
+# splitting the data
+split_point = int(len(X)* 0.7)
+X_train = X[:split_point]
+X_test = X[split_point:]
+y_train = y[:split_point]
+y_test = y[split_point:]
+
+print('X train')
+print(X_train.head())
+print('X test')
+print(X_test.head())
+
+print('\n---')
+
+print('y train')
+print(y_train.head())
+print('y test')
+print(y_test.head()'
