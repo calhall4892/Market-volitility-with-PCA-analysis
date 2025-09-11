@@ -38,4 +38,14 @@ print(y_test.head())
 # In order to understand how many n_components are needed, we must check the explained varience. This is used just after SVD in the PCA process and is therefore covered in more detail in the journal.
 pca = PCA(n_components=None)
 pca.fit(X_train)
-print(f'Here is the explained varience:' {pca})
+
+# This is an explained varience metric build into the PCA
+explained_varience = pca.explained_varience_ratio_
+
+plt.plot(np.cumsum(explained_varience)
+plt.xlabel('Number of components')
+plt.ylabel('Cumulative explained varience')
+plt.title('Comparison of components against explained varience')
+plt.grid(True)
+plt.show()
+
