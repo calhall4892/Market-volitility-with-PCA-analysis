@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+from sklearn.decomposition import PCA
 
 # loading the data
 df = pd.read_csv("data\Download Data - INDEX_UK_FTSE UK_UKX.csv", thousands = ',')
@@ -33,3 +34,8 @@ print('y train')
 print(y_train.head())
 print('y test')
 print(y_test.head())
+
+# In order to understand how many n_components are needed, we must check the explained varience. This is used just after SVD in the PCA process and is therefore covered in more detail in the journal.
+pca = PCA(n_components=None)
+pca.fit(X_train)
+print(f'Here is the explained varience:' {pca})
