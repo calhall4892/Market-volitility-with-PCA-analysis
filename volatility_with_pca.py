@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 from sklearn.decomposition import PCA
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 # loading the data
 df = pd.read_csv("data\Download Data - INDEX_UK_FTSE UK_UKX.csv", thousands = ',')
@@ -50,3 +52,24 @@ plt.title('Comparison of components against explained varience')
 plt.grid(True)
 plt.show()
 
+# Now it can be seen that a reduction of n_components to 2 will still allow for valid results so it can be reapplied
+pca = PCA(n_components=2)
+pca.fit(X_train)
+X_train_transform = pca.transform(X_train)
+X_test_transform = pca.transform(X_test)
+
+# Now we instantiate the model
+model = LinearRegression()
+
+# fit
+model.fit(X_train_transform, y_train)
+
+# predict
+y_pred = model.predict(X_test_transform)
+
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+
+# displaying the results
+print(f'The MSE is :{mse:.4f}')
+print(f'The RMSE is :{rmse:.4f}')
