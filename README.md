@@ -25,8 +25,13 @@ Market-Volitility-with-PCA-analysis/
 
 # Getting Started
 
-To be completed. Currently being completed by hand
+1. Close the repository
+2. Install dependancies
+
+**pip install -r requirements.txt**
+
+3. Run the model and follow along with the jupyter notebook to understand the process indepth.
 
 # Purpose
 
-To be completed. Currently being completed by hand.
+The purpose of this model is begin to understand and apply PCA algorithms to various project. This directly follows on from the Linear Algebra Fundamentals notebook where Singular Value Decomposition (SVD) is discussed in detail. 
