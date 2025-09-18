@@ -16,11 +16,11 @@ Volatility within a market is described as how much a price moves within a given
 Market-Volitility-with-PCA-analysis/
 ├── data/
 │   └── Download Data - INDEX_UK_FTSE UK_UKX.csv
-├── code/
-│   └── market-direction-model.py
-├── .gitignore
+├── PCA_Journal.ipynb
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── volatility_with_pca.py
+
 ```
 
 # Getting Started
